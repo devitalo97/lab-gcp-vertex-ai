@@ -3,9 +3,9 @@ import { sendTextMessage } from './use-case/send-text-message.js';
 import { sendSystemInstructionMessage } from '@/use-case/send-system-instruction-message.js';
 
 async function run() {
-  // await sendTextMessage();
-  // await sendMultimodalMessage();
-  await sendSystemInstructionMessage();
+  await sendTextMessage();
+  await sendMultimodalMessage();
+  // await sendSystemInstructionMessage();
 }
 
 run();

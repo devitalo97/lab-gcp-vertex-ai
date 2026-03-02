@@ -24,13 +24,11 @@ export async function sendMultimodalMessage() {
 
   const model = 'gemini-3-flash-preview';
 
-  const textData =
-    'Transcribe the interview in the format of timecode, speaker, and caption. Use speaker A, speaker B, etc., to identify different speakers.';
+  const textData = 'Transcribe the first 30 seconds of the video file.';
 
   const fileData: FileData = {
-    fileUri:
-      'gs://cloud-samples-data/generative-ai/audio/Chirp-3-Docs-Dive.mp3',
-    mimeType: 'audio/mp3',
+    fileUri: 'https://www.youtube.com/watch?v=an8SrFtJBdM',
+    mimeType: 'video/mp4',
   };
 
   const audioData: PartUnion = {

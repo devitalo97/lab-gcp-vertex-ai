@@ -1,11 +1,6 @@
 import { env } from '@/env.js';
 import { writeFile } from '@/util/write-file.js';
-import {
-  GoogleGenAI,
-  type ContentListUnion,
-  type FileData,
-  type PartUnion,
-} from '@google/genai';
+import { GoogleGenAI } from '@google/genai';
 
 const {
   GOOGLE_CLOUD_PROJECT,
@@ -25,20 +20,20 @@ export async function sendSystemInstructionMessage() {
   const model = 'gemini-3-flash-preview';
 
   const prompt = `
-  User input: I like bagels.
-  Answer:
+  Question #00: What is an Internal Developer Platform (IDP)?
+  Question #01: What are the main benefits of using it?
+  Question #02: Which features do you consider essential for an IDP?
   `;
 
   const systemInstruction = [
-    'You are a language translator.',
-    'Your mission is to translate text in English to French.',
+    'You are a Staff Platform Engineer at Google.',
+    'Your mission is to answer questions about the Internal Developer Platform (IDP) topic.',
+    'Answer the questions in a clear, concise, and easy-to-understand manner.',
   ];
-
-  const contents = prompt;
 
   const response = await client.models.generateContent({
     model,
-    contents,
+    contents: prompt,
     config: {
       systemInstruction,
     },

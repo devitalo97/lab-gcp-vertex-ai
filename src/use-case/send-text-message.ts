@@ -18,7 +18,7 @@ export async function sendTextMessage() {
   });
 
   const model = 'gemini-3-flash-preview';
-  const contents = 'How does AI work?';
+  const contents = 'What is Platform Engineering?';
 
   const response = await client.models.generateContent({
     model,
