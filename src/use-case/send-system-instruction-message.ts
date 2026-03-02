@@ -1,6 +1,11 @@
 import { env } from '@/env.js';
 import { writeFile } from '@/util/write-file.js';
-import { GoogleGenAI } from '@google/genai';
+import {
+  GoogleGenAI,
+  type ContentListUnion,
+  type FileData,
+  type PartUnion,
+} from '@google/genai';
 
 const {
   GOOGLE_CLOUD_PROJECT,
@@ -8,9 +13,9 @@ const {
   GOOGLE_GENAI_USE_VERTEXAI,
 } = env;
 
-const OUTPUT_FILE_PATH = '/assets/send-text-message-output.md';
+const OUTPUT_FILE_PATH = '/assets/send-system-instruction-message-output.md';
 
-export async function sendTextMessage() {
+export async function sendSystemInstructionMessage() {
   const client = new GoogleGenAI({
     vertexai: GOOGLE_GENAI_USE_VERTEXAI,
     project: GOOGLE_CLOUD_PROJECT,
@@ -18,11 +23,25 @@ export async function sendTextMessage() {
   });
 
   const model = 'gemini-3-flash-preview';
-  const contents = 'How does AI work?';
+
+  const prompt = `
+  User input: I like bagels.
+  Answer:
+  `;
+
+  const systemInstruction = [
+    'You are a language translator.',
+    'Your mission is to translate text in English to French.',
+  ];
+
+  const contents = prompt;
 
   const response = await client.models.generateContent({
     model,
     contents,
+    config: {
+      systemInstruction,
+    },
   });
 
   if (response.text) {

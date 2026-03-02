@@ -1,0 +1,7 @@
+0:00-0:08 | Speaker A | Welcome to the Deep Dive. This is where we dig into complex tech docs and research so you don't have to, leaving you instantly well-informed.
+0:08-0:17 | Speaker A | Today we're looking at something really crucial in AI right now, getting speech recognition to be accurate, fast, and maybe toughest of all, truly multilingual.
+0:17-0:28 | Speaker B | It really is the challenge, isn't it? I mean, think about all the audio data flooding in customer calls, meetings, you name it. Uh, the older ASR models, they just struggled with the variety, accents, background noise, people switching languages, it was tough.
+0:28-0:42 | Speaker A | Absolutely. So today's mission, we're diving deep into the official docs for Chirp 2. This is Google's latest ASR generative model. And here's the key thing, it's only in the Cloud Speech-to-Text API v2.
+0:42-0:54 | Speaker A | We're going to figure out what Chirp 2 actually is, how it's supposed to be faster, more accurate, and what specific tools, you know, like noise filtering or speaker separation you can actually use.
+0:54-1:00 | Speaker A | Okay, let's unpack this then. What's Chirp 2 bringing to the table that feels like a real step up from what we had before?
+1:00-1:12 | Speaker B | Well, Chirp 2 is basically Google's next-gen multilingual ASR. They call it their latest ASR-specific generative model.

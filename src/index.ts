@@ -1,10 +1,11 @@
+import { sendMultimodalMessage } from '@/use-case/send-multimodal-message.js';
 import { sendTextMessage } from './use-case/send-text-message.js';
+import { sendSystemInstructionMessage } from '@/use-case/send-system-instruction-message.js';
 
 async function run() {
-  const model = 'gemini-3-flash-preview';
-  const contents = 'How does AI work?';
-
-  await sendTextMessage(model, contents);
+  // await sendTextMessage();
+  // await sendMultimodalMessage();
+  await sendSystemInstructionMessage();
 }
 
 run();
