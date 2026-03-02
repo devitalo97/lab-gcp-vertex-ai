@@ -10,10 +10,13 @@ import path from 'node:path';
  */
 export async function writeFile(
   destination: string,
-  content: string | Buffer | Uint8Array
+  content: string | Buffer | Uint8Array,
+  options?: { append?: boolean }
 ): Promise<void> {
   const absoluteDestination = path.join(process.cwd(), destination);
   const dir = path.dirname(absoluteDestination);
   await fs.mkdir(dir, { recursive: true });
-  await fs.writeFile(absoluteDestination, content);
+  await fs.writeFile(absoluteDestination, content, {
+    flag: options?.append ? 'a' : 'w',
+  });
 }
