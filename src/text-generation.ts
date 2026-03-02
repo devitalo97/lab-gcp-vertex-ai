@@ -1,5 +1,6 @@
 import { GoogleGenAI } from '@google/genai';
 import { env } from './env.js';
+import { writeFile } from './util/write-file.js';
 
 const {
   GOOGLE_CLOUD_PROJECT,
@@ -22,7 +23,9 @@ async function generateText(
     contents: 'How does AI work?',
   });
 
-  console.log(response.text);
+  if (response.text) {
+    await writeFile('/assets/text-generation-output.md', response.text);
+  }
 
   return response.text;
 }
