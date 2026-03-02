@@ -22,7 +22,7 @@ export async function sendMultimodalMessage() {
     location: GOOGLE_CLOUD_LOCATION,
   });
 
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini-2.5-flash';
 
   const textData = 'Transcribe the first 30 seconds of the video file.';
 

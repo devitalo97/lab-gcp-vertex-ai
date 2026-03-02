@@ -17,7 +17,7 @@ export async function sendSystemInstructionMessage() {
     location: GOOGLE_CLOUD_LOCATION,
   });
 
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini-2.5-flash';
 
   const prompt = `
   Question #00: What is an Internal Developer Platform (IDP)?

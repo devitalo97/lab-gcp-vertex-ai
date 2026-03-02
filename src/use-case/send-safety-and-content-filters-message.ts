@@ -18,7 +18,7 @@ export async function sendSafetyAndContentFiltersMessage() {
     location: GOOGLE_CLOUD_LOCATION,
   });
 
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini-2.5-flash';
 
   const systemInstruction = 'Be as mean as possible.';
 

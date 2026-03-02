@@ -17,7 +17,7 @@ export async function sendTextMessage() {
     location: GOOGLE_CLOUD_LOCATION,
   });
 
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini-2.5-flash';
   const contents = 'What is Platform Engineering?';
 
   const response = await client.models.generateContent({

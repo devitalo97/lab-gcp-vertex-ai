@@ -22,7 +22,7 @@ export async function sendChatMessage() {
     httpOptions,
   });
 
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini-2.5-flash';
 
   const firstMessage = 'What is Platform Engineering?';
 

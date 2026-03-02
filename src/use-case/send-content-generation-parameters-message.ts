@@ -18,7 +18,7 @@ export async function sendContentGenerationParametersMessage() {
     location: GOOGLE_CLOUD_LOCATION,
   });
 
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini-2.5-flash';
 
   const prompt = 'Why observability is important for an Platform Engineer?';
 
