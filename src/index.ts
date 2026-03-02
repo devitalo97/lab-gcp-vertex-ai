@@ -6,6 +6,9 @@ import { sendSafetyAndContentFiltersMessage } from '@/use-case/send-safety-and-c
 import { sendChatMessage } from '@/use-case/send-chat-message.js';
 import { sendStreamMessage } from '@/use-case/send-stream-message.js';
 import { sendJobMessage } from '@/use-case/send-job-message.js';
+import { getTokenCount } from '@/use-case/get-token-count.js';
+import { createAndUseCacheContext } from '@/use-case/create-and-use-cache-context.js';
+import { runFunctionCallingUseCase } from '@/use-case/function-calling.js';
 
 async function run() {
   // await sendTextMessage();
@@ -15,7 +18,10 @@ async function run() {
   // await sendSafetyAndContentFiltersMessage();
   // await sendChatMessage();
   // await sendStreamMessage();
-  await sendJobMessage();
+  // await sendJobMessage();
+  // await getTokenCount();
+  // await createAndUseCacheContext();
+  await runFunctionCallingUseCase();
 }
 
 run();
