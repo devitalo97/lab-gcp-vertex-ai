@@ -14,5 +14,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@vertex/config-eslint": "^1.0.0",
+    "@vertex/config-typescript": "^1.0.0"
+  }
 }
