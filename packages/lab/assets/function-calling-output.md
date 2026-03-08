@@ -8,5 +8,5 @@
       }
     }
   ],
-  "text": "O custo de uma instância a2-highgpu-1g na região southamerica-east1 é de 0.134 USD por hora."
+  "text": "Uma a2-highgpu-1g em southamerica-east1 custa 0.134 USD por hora."
 }

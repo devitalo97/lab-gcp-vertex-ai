@@ -4,37 +4,32 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file=.env src/index.ts",
-    "build": "tsc && tsc-alias",
-    "start": "node dist/index.js",
-    "lint": "eslint src --fix",
-    "format": "prettier --write src/**/*.ts"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "check-types": "turbo run check-types",
+    "lint": "turbo run lint",
+    "format": "turbo run format"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/node": "^25.3.3",
-    "eslint": "^10.0.2",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.4.0",
-    "jiti": "^2.6.1",
-    "prettier": "3.8.1",
-    "tsc-alias": "^1.8.16",
-    "tsx": "^4.21.0",
-    "turbo": "^2.8.14",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1"
-  },
   "dependencies": {
-    "@google/genai": "^1.43.0",
+    "@google/genai": "^1.44.0",
     "zod": "^4.3.6"
   },
   "packageManager": "npm@11.6.1",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "prettier": "^3.8.1",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.21.0",
+    "turbo": "^2.8.14",
+    "typescript": "^5.9.3"
+  }
 }
