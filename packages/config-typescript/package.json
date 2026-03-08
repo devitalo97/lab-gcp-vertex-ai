@@ -1,0 +1,14 @@
+{
+  "name": "@vertex/config-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./base": "./base.json",
+    "./browser-base": "./browser-base.json",
+    "./backend-base": "./backend-base.json"
+  }
+}
