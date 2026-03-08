@@ -24,11 +24,17 @@
     "prettier": "3.8.1",
     "tsc-alias": "^1.8.16",
     "tsx": "^4.21.0",
+    "turbo": "^2.8.14",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1"
   },
   "dependencies": {
     "@google/genai": "^1.43.0",
     "zod": "^4.3.6"
-  }
+  },
+  "packageManager": "npm@11.6.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
